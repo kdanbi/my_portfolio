@@ -83,6 +83,18 @@ body.active {
   content: none;
 }
 
+@-webkit-keyframes bounce {
+  100% {
+    top: -2px;
+  }
+}
+
+@keyframes bounce {
+  100% {
+    top: -2px;
+  }
+}
+
 @-webkit-keyframes dropHeader {
   0% {
     visibility: visible;
@@ -258,7 +270,35 @@ header .navbar {
 }
 
 header .navbar h2 {
-  color: #130250;
+  color: #4527b4;
+}
+
+header .navbar h2 span {
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  -webkit-animation: bounce 0.4s ease infinite alternate;
+          animation: bounce 0.4s ease infinite alternate;
+}
+
+header .navbar h2 span:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+header .navbar h2 span:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+header .navbar h2 span:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+header .navbar h2 span:nth-child(5) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 header ul {
@@ -605,8 +645,8 @@ footer {
     ---------------------------
 */
 #about {
-  padding: 75px 100px;
-  width: 70%;
+  padding: 50px 100px;
+  width: 77%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -626,6 +666,7 @@ footer {
 #about h2 {
   color: #130250;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 #about .profile {
@@ -638,7 +679,7 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 25px 0;
+  margin-top: 50px;
 }
 
 #about .profile__photo {
@@ -649,7 +690,6 @@ footer {
 #about .profile__intro {
   color: #130250;
   margin: 0 70px;
-  height: 50%;
 }
 
 /*
@@ -917,20 +957,33 @@ footer {
     -------------------------------
 */
 #contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 50px 15px;
   background: url(../images/bkg.jpg);
   text-align: center;
+  height: 70vh;
 }
 
 #contact h2 {
-  margin: 0 0 15px 0;
+  margin-bottom: 50px;
   color: white;
   font-weight: 500;
+  font-size: 2em;
 }
 
 #contact-form {
-  max-width: 500px;
+  width: 600px;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 #contact-form input, #contact-form textarea {
