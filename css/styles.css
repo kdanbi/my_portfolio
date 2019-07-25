@@ -886,7 +886,21 @@ footer {
   margin: 8rem 2rem;
 }
 
+.project-image img {
+  width: 350px;
+}
+
 .project-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   top: 50%;
   padding: 15px;
   width: 50%;
