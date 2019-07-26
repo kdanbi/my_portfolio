@@ -27,6 +27,12 @@
         12. Media Queries
 */
 
+@mixin mobile {
+    @media (max-width: 400px) {
+        @content;
+    }
+}
+
 /*
     ------------------------
     ----- 1. Variables -----
@@ -283,7 +289,7 @@ header {
     position: fixed;
     right: 15px;
     top: 10px;
-    color: $base-color;
+    color: rgb(189, 163, 20);
     font-size: 1.5em;
     z-index: 20;
     padding: 0 7px;
@@ -300,7 +306,7 @@ header {
     padding-right: 15px;
     padding-top: 10px;
     cursor: pointer;
-    color: $base-color;
+    //color: $base-color;
 
     span {
         font-size: 0.5em;
@@ -427,6 +433,10 @@ footer {
     background-size: cover;
     padding: 15px;
     overflow: hidden;
+    @include mobile {
+        position: static;
+        height: 100%;
+    }
 }
 
 #lead-content {
@@ -459,6 +469,11 @@ footer {
         animation-delay: 4s;
         animation-fill-mode: forwards;
         visibility: hidden;
+        @include mobile {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out 2s forwards;
+            visibility: visible;
+        }
     }
     h3 {
         overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -481,6 +496,7 @@ footer {
     bottom: 0;
     left: 0;
     z-index: 1;
+
 }
 
 #lead-down {
@@ -542,24 +558,45 @@ footer {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    @include mobile {
+        padding: 0;
+        display: block;
+        height: 100%;
+        margin: 0;
+        width: 100%;
+    }
 
     h2 {
         color: $heading;
         margin: 0 auto;
         margin-bottom: 50px;
+        @include mobile {
+            margin-top: 50px;
+        }
     }
     .profile {
         display: flex;
         align-items: center;
         justify-content: center;
         margin-top: 50px;
+        @include mobile {
+            flex-direction: column;
+            margin: 0;
+        }
         &__photo {
             border-radius: 50%;
             width: 300px;
+            @include mobile {
+                width: 200px;
+            }
         }
         &__intro {
             color: $text;
             margin: 0 70px;
+            @include mobile {
+                margin: 0 16px;
+                margin-top: 50px;
+            }
         }
     }
 }
@@ -761,7 +798,9 @@ footer {
     background: #fff;
     border-radius: 4px;
     margin: 8rem 2rem;
-    
+    @include mobile {
+        margin: 0;
+    }
 }
 
 .project-image {
@@ -769,8 +808,6 @@ footer {
         width: 350px;
     }
 }
-
-
 .project-info {
     display: flex;
     flex-direction: column;
@@ -782,6 +819,9 @@ footer {
 
     padding: 15px;
     width: 50%;
+    @include mobile {
+        width: 300px;
+    }
 
     h3 {
         font-size: 1.5em;
@@ -820,7 +860,9 @@ footer {
     padding: 100px 15px;
     text-align: center;
     height: 400px;
-
+    @include mobile {
+        height: 100%;
+    }
     h2 {
         color: $heading;
         margin-bottom: 50px;
@@ -872,7 +914,9 @@ footer {
     //max-width: 500px;
     margin: 0 auto;
     margin-bottom: 30px;   
-
+    @include mobile {
+        width: 100%;
+    }
     input, textarea {
         display: block;
         width: 100%;
@@ -1116,8 +1160,9 @@ footer {
         background-size: cover;
     }
     #lead-content {
+        width: 100%;
         h1 {
-            font-size: 5em;
+            font-size: 3em;
             margin: 50% 0;
         }
 
@@ -1132,3 +1177,4 @@ footer {
     }
 
 }
+

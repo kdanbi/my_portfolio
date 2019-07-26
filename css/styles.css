@@ -353,7 +353,7 @@ header.sticky {
   position: fixed;
   right: 15px;
   top: 10px;
-  color: white;
+  color: #bda314;
   font-size: 1.5em;
   z-index: 20;
   padding: 0 7px;
@@ -370,7 +370,6 @@ header.sticky {
   padding-right: 15px;
   padding-top: 10px;
   cursor: pointer;
-  color: white;
 }
 
 #mobile-menu-close span {
@@ -504,6 +503,13 @@ footer {
   overflow: hidden;
 }
 
+@media (max-width: 400px) {
+  #lead {
+    position: static;
+    height: 100%;
+  }
+}
+
 #lead-content {
   height: 800px;
   width: 800px;
@@ -549,6 +555,15 @@ footer {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   visibility: hidden;
+}
+
+@media (max-width: 400px) {
+  #lead-content h1 {
+    opacity: 0;
+    -webkit-animation: fadeInUp 1s ease-in-out 2s forwards;
+            animation: fadeInUp 1s ease-in-out 2s forwards;
+    visibility: visible;
+  }
 }
 
 #lead-content h3 {
@@ -663,10 +678,26 @@ footer {
   height: 100vh;
 }
 
+@media (max-width: 400px) {
+  #about {
+    padding: 0;
+    display: block;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+  }
+}
+
 #about h2 {
   color: #130250;
   margin: 0 auto;
   margin-bottom: 50px;
+}
+
+@media (max-width: 400px) {
+  #about h2 {
+    margin-top: 50px;
+  }
 }
 
 #about .profile {
@@ -682,14 +713,37 @@ footer {
   margin-top: 50px;
 }
 
+@media (max-width: 400px) {
+  #about .profile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+  }
+}
+
 #about .profile__photo {
   border-radius: 50%;
   width: 300px;
 }
 
+@media (max-width: 400px) {
+  #about .profile__photo {
+    width: 200px;
+  }
+}
+
 #about .profile__intro {
   color: #130250;
   margin: 0 70px;
+}
+
+@media (max-width: 400px) {
+  #about .profile__intro {
+    margin: 0 16px;
+    margin-top: 50px;
+  }
 }
 
 /*
@@ -886,6 +940,12 @@ footer {
   margin: 8rem 2rem;
 }
 
+@media (max-width: 400px) {
+  .project {
+    margin: 0;
+  }
+}
+
 .project-image img {
   width: 350px;
 }
@@ -904,6 +964,12 @@ footer {
   top: 50%;
   padding: 15px;
   width: 50%;
+}
+
+@media (max-width: 400px) {
+  .project-info {
+    width: 300px;
+  }
 }
 
 .project-info h3 {
@@ -940,6 +1006,12 @@ footer {
   padding: 100px 15px;
   text-align: center;
   height: 400px;
+}
+
+@media (max-width: 400px) {
+  #skills {
+    height: 100%;
+  }
 }
 
 #skills h2 {
@@ -998,6 +1070,12 @@ footer {
   width: 600px;
   margin: 0 auto;
   margin-bottom: 30px;
+}
+
+@media (max-width: 400px) {
+  #contact-form {
+    width: 100%;
+  }
 }
 
 #contact-form input, #contact-form textarea {
@@ -1225,8 +1303,11 @@ footer {
     height: 100vh;
     background-size: cover;
   }
+  #lead-content {
+    width: 100%;
+  }
   #lead-content h1 {
-    font-size: 5em;
+    font-size: 3em;
     margin: 50% 0;
   }
   #lead-content h2 {
