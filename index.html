@@ -175,7 +175,7 @@
                             <p>A music therapy chatbot for discovering Spotify playlists that match your mood. </p>
                             <br>
                             <p>JavaScript | React | Express | Node.js | Dialogflow | Spotify API | oAuth2</p>
-                            <a href="https://hellomupy.com">View Project</a>
+                            <a href="https://www.hellomupy.com">View Project</a>
                         </div>
                         <!-- End .project-info -->
                     </div>
@@ -220,7 +220,7 @@
 
     <div id="skills">
         <h2 class="heading">03. Skills</h2>
-        <ul>
+        <ul id="tim">
             <li>JavaScript</li>
             <li>Node.js</li>
             <li>Express</li>
@@ -233,6 +233,7 @@
             <li>Agile Methodology</li>
             <li>Tableau</li>
             <li>Chartjs</li>
+            <li id="tim2">Tim</li>
         </ul>
     </div>
     <!-- End #skills -->
@@ -287,10 +288,16 @@
         </div>
     </footer>
     <!-- End footer -->
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
     <script src="js/balloons.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#tim").click(function(){
+        alert("Congratulations Tim on passing the bar exam!! :)");
+        });
+    });
+    </script>
 </body>
 
 </html>
